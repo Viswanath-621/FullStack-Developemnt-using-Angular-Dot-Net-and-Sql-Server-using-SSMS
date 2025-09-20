@@ -7,7 +7,32 @@
  5. pop
  6. unshift
  7. shift
+ 8. forEach 
+ 9. map
+10. filter
+11. reduce
 */
+
+
+/*So till here i understood the loops concepts as 
+- for(let i in arrays); -> index
+- for (let i of arrays); -> direct value
+- arrays.forEach((val,index,arrays)=>{
+    
+}) 
+    
+AND,
+if no arrays is there but we need a loop then we can use the simple 
+- for (let i=0;i<n;i++)
+OR 
+- let i =0;
+  While(i<n){
+  i++;
+  }
+*/
+
+// Note: Higher order functions or Methods eg: forEach, as they accept a function as a parameter or input and they can return a function as a output.
+
 
 console.log("new to world");
 
@@ -174,3 +199,114 @@ console.log(c);
 //add element using splice 
 c.splice(2,0,"he");
 console.log(c);
+
+function myFunction(msg,n){
+    console.log(msg, n);
+}
+
+myFunction("hii man", 90);
+
+function addnew(a,b){
+    return a+b;
+}
+
+console.log(addnew(2,5));
+
+//arrow functions 
+
+const arrowSum = (a,b) => {
+    console.log(a+b);
+    return a+b;
+}
+
+arrowSum(2,3);
+
+//practice functions 
+
+function checkVowels(Str){
+    let arr = ['a','e','i','o','u'];
+    let s=0;
+    for(const chr of Str){
+        if (arr.includes(chr)){
+            s +=1; 
+        }
+    }
+
+    return s;
+}
+
+console.log(checkVowels("aiou"));
+
+//same logic with arrow method 
+
+const checkVowelsArrow = (Str) =>{
+    let arr = ['a','e','i','o','u'];
+    let s=0;
+    for(const chr of Str){
+        if (arr.includes(chr)){
+            s +=1; 
+        }
+    }
+
+    return s;
+}
+console.log(checkVowelsArrow('aeiou'));
+
+//forEach topic for arrays
+let arrays= [10,20,30,40];
+const results = [];
+arrays.forEach((val, idx, arr)=>{
+    results.push(val**2);
+});
+
+console.log(results);
+
+//case 2 -> maps
+
+arrays = ['king','chica'];
+
+// arrays.unshift(arrays.forEach((val)=>{
+//     return val.toUpperCase();
+// }));
+
+arrays = arrays.map((val)=>val.toUpperCase());
+
+console.log(arrays);
+
+arrays=[10,20];
+let newArr = arrays.filter((value)=>{
+    return value%5==0;
+
+});
+
+console.log(newArr);
+
+let reduArray =[10,20,30,90];
+
+const output = reduArray.reduce((res,curr)=>{
+    return res+curr;
+});
+
+console.log(output);
+
+//find largest number using reduce method in arrays
+arrs = [10,20,40,90,30,78];
+
+result = arrs.reduce((i,j)=>{
+    return i > j ? i : j;
+});
+
+//Basics are done -> Now real javaScript starts 
+
+/* The 3 Musketeers of WEB DEV 
+- Html -> Structure
+- CSS -> stylle
+- JS -> Logic
+
+Lovely point i got to know, is that, all the html code is asscessible by window.document 
+
+window.document 
+console.dir(window.document)
+*/
+
+document.body.childNodes[3].innerText ='abcd';

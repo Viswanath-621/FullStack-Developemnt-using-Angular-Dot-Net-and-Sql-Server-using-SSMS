@@ -1,0 +1,31 @@
+body{
+    background-color: rgb(67, 112, 4);
+}
+h1 {
+    color: pink;
+    border: rgba(247, 247, 44, 0.133);
+    font: normal;
+    font-size: 22px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 200;
+    font-style: italic;
+    font-variant: small-caps;
+    padding: 10px;
+    margin: 5px;
+}
+
+h4{
+    color: blue;
+    padding: 10px;
+    margin: 5px;
+    text-decoration: line-through;
+}
+
+.king{
+    padding: 40px;
+    margin: 10px;
+    width: 350px;
+    height: 350px;
+    background-color: rgb(7, 138, 95);
+    border-radius: 10px;
+}
