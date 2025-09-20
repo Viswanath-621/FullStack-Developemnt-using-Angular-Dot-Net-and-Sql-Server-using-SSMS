@@ -14,6 +14,7 @@ git init
 2️⃣ Configure Your Git Identity
 
 git config --global user.name "Your Name"
+
 git config --global user.email "your_email@example.com"
 
 git config --global --list
@@ -21,6 +22,7 @@ git config --global --list
 3️⃣ Stage and Commit Your Code
 
 git add .
+
 git commit -m "Initial commit"
 
 4️⃣ Connect Your Local Project to GitHub
