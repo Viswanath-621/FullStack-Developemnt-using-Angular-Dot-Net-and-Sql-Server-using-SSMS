@@ -19,16 +19,20 @@ git config --global user.email "your_email@example.com"
 git config --global --list
 
 3️⃣ Stage and Commit Your Code
+
 git add .
 git commit -m "Initial commit"
 
 4️⃣ Connect Your Local Project to GitHub
+
 git remote add origin https://github.com/username/my-project.git
 
 5️⃣ Sync with GitHub (If Repo Already Has Files like README)
+
 git pull origin main --rebase
 
 6️⃣ Push Your Code to GitHub
+
 git push -u origin main
 
 ✅ Done!
